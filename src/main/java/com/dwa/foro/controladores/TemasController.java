@@ -45,7 +45,7 @@ public class TemasController {
 		return "temas/listar";
 	}
 	
-	@PostMapping("/temas/agregar")
+	@PostMapping("temas/agregar")
 	public String agregar(Model modelo, @ModelAttribute Tema tema, HttpSession sesion) {
 		int idser = Integer.parseInt(sesion.getAttribute("iduser").toString());
 		Usuario autor = servicioUsuario.buscar(idser);
